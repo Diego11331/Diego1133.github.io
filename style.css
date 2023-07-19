@@ -62,7 +62,7 @@ h1{
     position: absolute;
 }
 .border{
-    color: black;
+    color: #000000;
     text-shadow: 
         -1px -1px 0 white,
         1px -1px 0 white,
