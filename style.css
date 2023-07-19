@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Inline+One&family=Poppins:wght@300;400;600;700&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #000000;
+}
+
+/*! Texto animado */
+h1{
+    text-align: center;
+    font-size: 4rem;
+    background: linear-gradient(to top, #008aff, #00ffe7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animateText 5s linear infinite;
+}
+
+@keyframes animateText {
+    0%, 100%{
+        filter: hue-rotate(0deg);
+    }
+    50%{
+        filter: hue-rotate(-360deg);
+    }
+
+}
+
+.grid-layout{
+    width: 80%;
+    padding: 20px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    justify-content: stretch;
+    grid-gap: 5px;
+}
+
+.caja{
+    border: 3px solid transparent;
+    border-image: linear-gradient(to top, #008aff, #00ffe7) 1;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 2rem;
+    height: 150px;
+    animation: animateText 7s linear infinite;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*! Efecto de ola */
+.efectoWavy{
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.efectoWavy h2{
+    font-size: 6rem;
+    position: absolute;
+}
+.border{
+    color: black;
+    text-shadow: 
+        -1px -1px 0 white,
+        1px -1px 0 white,
+        1px 1px 0 white,
+        -1px 1px 0 white;
+}
+.wave{
+    color: #09f;
+    animation: wave 3s ease-in-out infinite;
+}
+@keyframes wave {
+    0%, 100% {
+        clip-path: polygon(0% 47%, 10% 48%, 33% 54%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
+    }
+
+    50% {
+        clip-path: polygon(0% 60%, 15% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
+    }
+
+}
+
+/*! Efecto de Máquina de escribir */
+.maquinaescribir{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.maquina_span {
+    display: block;
+    font-family: monospace;
+    white-space: nowrap;
+    border-right: 4px solid #149414;
+    font-size: 1rem;
+    color: #149414;
+    width: 12ch;
+    animation: typing 2s steps(12), blink .5s infinite step-end alternate;
+    overflow:hidden;
+    }
+    
+    @keyFrames typing {
+    
+    from { width: 0}
+    }
+    
+    @keyFrames blink {
+     50% { border-color: transparent}
+    }
+
+/*! Cambio de fondo */
+.cambioFondo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+}
+.active{
+    background-color: #ffffff;
+}
+.toggle_btn{
+    font-size: 2.5rem;
+    cursor: pointer;
+    z-index: 100;
+}
+.fa-sun{
+    color: #ffffff;
+}
+.fa-moon{
+    color: #000000;
+}
+
+/*! Scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(transparent, #008aff);
+    border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(transparent, #00ffe7);
+}
+
+@media (max-width:800px) {
+    .efectoWavy h2{
+        font-size: 2rem;
+        position: absolute;
+    }
+}
