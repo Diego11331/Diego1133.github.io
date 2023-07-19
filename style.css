@@ -43,7 +43,7 @@ h1{
     color: #ffffff;
     font-size: 2rem;
     height: 150px;
-    animation: animateText 7s linear infinite;
+    animation: animateText 8s linear infinite;
 
     display: flex;
     align-items: center;
