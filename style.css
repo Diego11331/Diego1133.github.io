@@ -174,13 +174,6 @@ h1{
     background: linear-gradient(transparent, #00ffe7);
 }
 
-@media (max-width:800px) {
-    .efectoWavy h2{
-        font-size: 2rem;
-        position: absolute;
-    }
-}
-
 /*! Fondo de Burbujas */
 .fondo-burbujas{
     background-color: #0c192c;
@@ -221,5 +214,18 @@ h1{
     }
     100%{
         transform: translateY(-30px) scale(1);
+    }
+}
+
+@media (max-width:800px) {
+    .efectoWavy h2{
+        font-size: 2rem;
+        position: absolute;
+    }
+    .burbujas__item:nth-child(1),
+    .burbujas__item:nth-child(2),
+    .burbujas__item:nth-child(3)
+    {
+        display: none;
     }
 }
